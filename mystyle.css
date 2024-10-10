@@ -1,0 +1,106 @@
+ body {
+		background-image:url('58b4aaac-f2bd-4bb4-9958-f07f17e7c840.jpeg ');  
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+             color: white; 
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            color: black;
+           background-color:white;
+            padding: 10px;
+
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align:center;
+        }
+		 .io {
+            width: 800px; 
+            height: auto; 
+			border-radius:50%;
+			object-fit: cover;
+			border: 2px solid black;
+			
+			}
+        .lykostolve {
+            width: 150px; 
+            height: auto; 
+			
+        }
+		.lykos {
+            width: 150px; 
+            height: auto; 
+			 
+        }
+		.tito{
+            width: 150px; 
+            height: auto; 
+			 
+        }
+		.azpicerno {
+            width: 200px; 
+            height:auto; 
+			 
+        }
+		td{
+		background: rgba( 0 ,0 ,0,0.5);
+		}
+		   footer {
+            background-image: url('io.jpeg');
+            background-size: cover;
+            background-position: center;
+            color: black;
+            text-align: center;
+            padding: 20px;
+			}
+			.a{
+			
+			margin-right:10px;
+            width: 300px; 
+            height: auto;		
+			margin: 0 auto; 	
+ 		
+			}
+			th, td {
+			
+            border: 1px solid black;
+            padding: 8px;
+            text-align:center;
+			}
+			.b{
+			
+            width:  300px; 
+            height:  300px;	
+			 margin: 0 auto; 
+			
+			}
+			.c{
+			
+            width:  300px; 
+			height: auto;
+			margin: 0 auto; 	
+ 			
+			}
+			.d{
+            width:  300px; 
+            height: auto;	
+			 margin: 0 auto; 
+			
+			}
+			.e{
+            width:  300px; 
+            height: 300px;	
+			 margin: 0 auto; 
+			 
+			}
+			
+        
