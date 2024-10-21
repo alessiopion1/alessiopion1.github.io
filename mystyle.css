@@ -33,82 +33,9 @@
 			object-fit: cover;
 			border: 2px solid black;
 			
-			}
-        .lykostolve {
-			  
-            width: 150px; 
-            height: auto; 
-			
-        }
-		.lykos {
-            width: 150px; 
-            height: auto; 
-			 
-        }
-		.tito{
-            width: 150px; 
-            height: auto; 
-			 
-        }
-		.azpicerno {
-            width: 200px; 
-            height:auto; 
-			 
-        }
-		td{
+	td{
 		background: rgba( 0 ,0 ,0,0.5);
 		}
 		div{
 		background: rgba( 0 ,0 ,0,0.3);
 		}
-		   footer {
-            background-image: url('io.jpeg');
-            background-size: cover;
-            background-position: center;
-            color: black;
-            text-align: center;
-            padding: 20px;
-			}
-			.a{
-			
-			margin-right:10px;
-            width: 300px; 
-            height: auto;		
-			margin: 0 auto; 	
- 		
-			}
-			 th, td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align:center;
-			color:white;
-			 }
-			
-			.b{
-			
-            width:  250px; 
-            height:  250px;	
-			 margin: 0 auto; 
-			
-			}
-			.c{
-			
-            width:  300px; 
-			height: auto;
-			margin: 0 auto; 	
- 			
-			}
-			.d{
-            width:  300px; 
-            height: auto;	
-			 margin: 0 auto; 
-			
-			}
-			.e{
-            width:  250px; 
-            height: 250px;	
-			 margin: 0 auto; 
-			 
-			}
-			
-        
