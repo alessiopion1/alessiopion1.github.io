@@ -1,8 +1,9 @@
 <html>
 <head>
-    <!-- Configurazione della pagina -->
     <title>SUSHI LO TITO</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    	<link rel="icon" type="image/x-icon" href="logo.jpg">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <style>
         body {
             background-image: url('ale.jpg');  
@@ -16,32 +17,51 @@
 		footer p {
     font-size: 18px;
 }
- 
+ .salmone{
+		width: auto; 
+            height: auto; 
+		}
+		.branzino{
+		width: auto; 
+            height: 290px; 
+		}
+		.tonno{
+		width: auto; 
+            height: 280px; 
+		}
+ .card-text {
+        font-size: 14px; 
+    }
 
 
 
     </style>
 </head>
 <body>
-   <nav class="navbar navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="logo.jpg" alt="logo ristorante" width="30" height="24" class="d-inline-block align-text-top">
-                Sushi Lo Tito
-            </a>
-            <div class="dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    MENU
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="nigiri.html">nigiri</a></li>
-                    <li><a class="dropdown-item" href="#">uramaki</a></li>
-                    <li><a class="dropdown-item" href="#">hosomaki</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+  <img src="logo.jpg" alt="logo ristorante" width="30" height="24" class="d-inline-block align-text-top">
+    <a class="navbar-brand" href="#">Sushi Lo Tito</a>
 	
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            MENU
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+            <li><a class="dropdown-item" href="#nigiri">Nigiri</a></li>
+            <li><a class="dropdown-item" href="#uramaki">Uramaki</a></li>
+            <li><a class="dropdown-item" href="#">Hosomaki</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
     
     <div class="container my-5 text-center" style="max-width: 570px;">
         <h1>Sushi Lo Tito</h1>
@@ -49,7 +69,48 @@
         <button type="button" class="btn btn-primary">Ordina subito</button>
         <button type="button" class="btn btn-secondary">Contattaci</button>
     </div>
+	<section id="nigiri">
+	<h1 style ="text-align:center;color:black;background-color:#800020;padding: 10px;">Nigiri <h1>
+	</section>
+    <div class="container text-center">
+	<div class="row">
+    <div class="col">
+        <div class="card mx-auto bg-dark text-light" style="width: 18rem;">
+            <img src="sushi.webp" class="salmone" alt="nigiri">
+            <div class="card-body">
+                <h5 class="card-title">Nigiri al salmone</h5>
+                <p class="card-text">Il nigiri al salmone è una specialità giapponese composta da una polpettina di riso sushi, morbida e ben compatta, sormontata da una fetta di salmone fresco. Il riso è leggermente acido, aromatizzato con aceto di riso, e la fetta di salmone, di un brillante colore arancione-rosato, è spesso servita cruda, esaltando il suo sapore delicato e burroso. È un piatto semplice ma raffinato, simbolo della tradizione sushi.</p> 
+                <a href="#" class="btn btn-primary">ACQUISTA</a>
+            </div>
+        </div>
+    </div>
 	
+    <div class="col">
+       <div class="card mx-auto bg-dark text-light" style="width: 18rem;">
+            <img src="2.jpg" class="tonno" alt="nigiri">
+            <div class="card-body">
+                <h5 class="card-title">Nigiri al tonno</h5>
+                <p class="card-text">Il nigiri al tonno è un'icona della cucina giapponese, composto da una pallina di riso sushi, leggermente acida, sulla quale viene adagiata una fetta di tonno fresco. La carne, di un intenso colore rosso, è tenera e saporita, offrendo un contrasto perfetto con il riso. Questo piatto semplice e raffinato rappresenta l'essenza del sushi, esaltando la qualità degli ingredienti  Il riso è leggermente acido, aromatizzato con aceto di riso, e la fetta di salmone, di un brillante colore arancione-rosato, è spesso servita cruda, esaltando il suo sapore delicato.</p>
+                <a href="#" class="btn btn-primary">ACQUISTA</a>
+            </div>
+        </div>
+    
+    </div>
+    <div class="col">
+      
+        <div class="card mx-auto bg-dark text-light" style="width: 18rem;">
+            <img src="3.jpg" class="branzino" alt="nigiri">
+            <div class="card-body">
+                <h5 class="card-title">Nigiri al branzino</h5>
+                <p class="card-text">Il nigiri al branzino è una delizia della cucina giapponese, composto da una polpettina di riso sushi ben compatta, guarnita con una fetta di branzino fresco e delicato. La carne bianca del pesce, morbida e saporita, si abbina armoniosamente con il riso leggermente acidulo. Questo piatto, semplice ma elegante, mette in risalto la freschezza degli ingredienti e la maestria artigianale del sushi.</p>
+                <a href="#" class="btn btn-primary">ACQUISTA</a>
+            </div>
+        </div>
+    </div>
+  </div>
+  <section id="uramaki">
+	<h1 style ="text-align:center;color:black;background-color:#800020;padding: 10px;">Uramaki <h1>
+	</section>
 
 	
     
