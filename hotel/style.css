@@ -1,0 +1,97 @@
+/* 🔹 RESET E BASI */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Century Gothic', sans-serif;
+}
+
+body {
+  background-color: #f4f2f0; 
+  overflow-x: hidden;
+}
+
+/* 🔹 HEADER E NAVIGAZIONE */
+header {
+  background-image: linear-gradient(rgba(44, 34, 27, 0.7), rgba(44, 34, 27, 0.7)), url('sfondo.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  display: flex !important;
+  flex-direction: row !important;
+  list-style: none !important;
+  padding: 10px 20px; 
+  margin: 0;
+}
+
+.nav .nav-link {
+  padding: 8px 20px;
+  transition: all 0.4s ease;
+  color: #f4f2f0 !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.nav .nav-link:hover,
+.nav-item.active .nav-link {
+  background-color: #8d775f; 
+  color: #fff !important;
+  border-radius: 2px;
+}
+
+/* 🔹 TIPOGRAFIA E BOTTONI */
+h1  {
+  font-size: 56px;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+
+.btn {
+  border: 1px solid #8d775f;
+  padding: 12px 30px;
+  color: #fff !important;
+  background-color: #8d775f;
+  font-size: 16px;
+  transition: 0.4s ease;
+  text-decoration: none;
+  border-radius: 0;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: transparent !important;
+  color: #8d775f !important;
+  border: 1px solid #8d775f;
+}
+
+/* 🔹 FOOTER */
+footer {
+  background-color: #2c221b;
+  color: #d1c7bd;
+  padding: 60px 20px;
+}
+
+footer h2 {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #8d775f;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+footer .mappa {
+  width: 100%;
+  height: 350px;
+  filter: grayscale(100%) contrast(1.2);
+  margin-bottom: 30px;
+}

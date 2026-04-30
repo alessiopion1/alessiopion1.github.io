@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="it">
+<!-- Nel tuo file index.html -->
+<head>
+    <!-- Bootstrap 5.3 (Sempre per primo) -->
+    <link href="https://cdn.jsdelivr.net" rel="stylesheet">
+    
+    <!-- I tuoi CSS divisi -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylecomponenti.css">
+</head>
+
+<body>
+
+<!-- 🔹 HEADER -->
+<header>
+    <div class="container py-3">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-auto">
+                <div class="logo">
+                    <img src="logo.png" alt="Hotel Logo" style="height: 70px;">
+                </div>
+            </div>
+            <div class="col-auto">
+                <!-- Aggiunta classe d-flex e list-unstyled per sicurezza -->
+                <ul class="nav d-flex list-unstyled mb-0">
+                    <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#camere">Camere</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#galleria">Galleria</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="container flex-grow-1 d-flex align-items-center justify-content-center text-center">
+        <div>
+            <h1>HOTEL NUMBER ONE</h1>
+            <p style=" color: #ffffff;font-weight: bold;text-shadow: 2px 2px 10px rgba(0,0,0,0.3);">Eleganza senza tempo, comfort moderno.</p>
+            <div class="button mt-4">
+                <a href="#prenota" class="btn">PRENOTA ORA</a>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- 🔹 SEZIONE PRENOTAZIONE MODIFICATA -->
+<section id="prenota" class="py-5" style="background-color: #e9e5e2;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-11 bg-white p-4 shadow-sm">
+                <form action="prenotazione.php" method="POST" class="row g-3 align-items-end">
+                    
+                    <!-- Nome e Cognome -->
+                    <div class="col-md-3">
+                        <label class="form-label text-dark small fw-bold">NOME E COGNOME</label>
+                        <input type="text" name="nome_completo" class="form-control border-0 bg-light" placeholder="Mario Rossi" required>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="col-md-3">
+                        <label class="form-label text-dark small fw-bold">EMAIL</label>
+                        <input type="email" name="email" class="form-control border-0 bg-light" placeholder="esempio@email.it" required>
+                    </div>
+
+                    <!-- Telefono -->
+                    <div class="col-md-2">
+                        <label class="form-label text-dark small fw-bold">TELEFONO</label>
+                        <input type="tel" name="telefono" class="form-control border-0 bg-light" placeholder="+39..." required>
+                    </div>
+
+                    <div class="col-md-2">
+                        <label class="form-label text-dark small fw-bold">ARRIVO</label>
+                        <input type="date" name="arrivo" class="form-control border-0 bg-light" required>
+                    </div>
+                    
+                    <div class="col-md-2">
+                        <label class="form-label text-dark small fw-bold">PARTENZA</label>
+                        <input type="date" name="partenza" class="form-control border-0 bg-light" required>
+                    </div>
+                    
+                    <div class="col-md-2">
+                        <label class="form-label text-dark small fw-bold">ADULTI</label>
+                        <select name="adulti" class="form-select border-0 bg-light">
+                            <option value="1">1 Adulto</option>
+                            <option value="2" selected>2 Adulti</option>
+                            <option value="3">3 Adulti</option>
+                            <option value="4">4 Adulti</option>
+                            <option value="5">5 Adulti</option>
+                        </select>
+                    </div>
+                    
+                    <div class="col-md-3">
+                        <label class="form-label text-dark small fw-bold">BAMBINI <span class="fw-normal" style="font-size: 0.75rem;">(max 12 anni)</span></label>
+                        <select name="bambini" class="form-select border-0 bg-light">
+                            <option value="0" selected>0 Bambini</option>
+                            <option value="1">1 Bambino</option>
+                            <option value="2">2 Bambini</option>
+                            <option value="3">3 Bambini</option>
+                        </select>
+                    </div>
+                    
+                    <div class="col-md-3">
+                        <button type="submit" class="btn w-100">PRENOTA ORA</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- 🔹 SEZIONE CAMERE -->
+<section id="camere" class="container my-5">
+    <div class="slider-wrapper">
+        <!-- Frecce di Navigazione -->
+        <button class="slider-btn prev" onclick="moveRoom(-1)">❮</button>
+        
+        <div class="slider-container">
+            <!-- 1. Suite Presidenziale -->
+            <div class="card-noleggi-slide active">
+                <div class="card-immagine">
+                    <img src="room1.jpg" alt="Suite Presidenziale">
+                </div>
+                <div class="card-contenuto">
+                    <div class="card-titolo">
+                        <span class="categoria">ESCLUSIVA</span>
+                        <h2>Suite Presidenziale</h2>
+                    </div>
+                    <div class="card-testo">
+                        <p>Arredata con materiali pregiati in tonalità tortora e legno scuro. Include spa privata in camera e vista sulla città.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Vista Mare -->
+            <div class="card-noleggi-slide">
+                <div class="card-immagine">
+                    <img src="8.jpg" alt="Vista Mare">
+                </div>
+                <div class="card-contenuto">
+                    <div class="card-titolo">
+                        <span class="categoria">PREMIUM</span>
+                        <h2>Vista Mare</h2>
+                    </div>
+                    <div class="card-testo">
+                        <p>Goditi il panorama dell'oceano direttamente dal tuo letto. Ampio terrazzo privato e arredi moderni.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Tripla Comfort -->
+            <div class="card-noleggi-slide">
+                <div class="card-immagine">
+                    <img src="3.jpeg" alt="Tripla Comfort">
+                </div>
+                <div class="card-contenuto">
+                    <div class="card-titolo">
+                        <span class="categoria">FAMIGLIA</span>
+                        <h2>Tripla Comfort</h2>
+                    </div>
+                    <div class="card-testo">
+                        <p>Spazio ideale per piccoli gruppi o famiglie. Letto matrimoniale e letto singolo con area relax integrata.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Standard Doppia -->
+            <div class="card-noleggi-slide">
+                <div class="card-immagine">
+                    <img src="2.jpg" alt="Standard Doppia">
+                </div>
+                <div class="card-contenuto">
+                    <div class="card-titolo">
+                        <span class="categoria">CLASSIC</span>
+                        <h2>Standard Doppia</h2>
+                    </div>
+                    <div class="card-testo">
+                        <p>Perfetta fusione tra comfort e convenienza. Dotata di connessione Wi-Fi ad alta velocità e minibar.</p>
+                    </div>
+                </div>
+            </div>
+
+        
+             <!-- 5.Family Room -->
+            <div class="card-noleggi-slide">
+                <div class="card-immagine">
+                    <img src="famiglia.webp" alt="Standard Doppia">
+                </div>
+                <div class="card-contenuto">
+                    <div class="card-titolo">
+                        <span class="categoria">CLASSIC</span>
+                        <h2>Family Room</h2>
+                    </div>
+                    <div class="card-testo">
+                        <p>Perfetta fusione tra comfort e convenienza. Dotata di connessione Wi-Fi ad alta velocità e minibar.</p>
+                    </div>
+                </div>
+            </div>
+    
+        
+        <button class="slider-btn next" onclick="moveRoom(1)">❯</button>
+    </div>
+</section>
+
+<!-- 🔹 GALLERIA -->
+<section id="galleria" class="container mb-5">
+    <h2 class="text-center mb-4" style="color: #2c221b;">Momenti di Relax</h2>
+    <div class="galleria">
+        <a href="javascript:void(0)" onclick="openLightbox(0)"><img src="hall.jpg" alt="Hall"></a>
+        <a href="javascript:void(0)" onclick="openLightbox(1)"><img src="rist.jpg" alt="Ristorante"></a>
+        <a href="javascript:void(0)" onclick="openLightbox(2)"><img src="pisc.jpg" alt="Piscina"></a>
+    </div>
+</section>
+<!-- 🔹 LIGHTBOX -->
+<div id="lightbox" class="lightbox">
+    <!-- Ho aggiunto la classe 'lightbox-btn' e 'close' per lo stile -->
+    <span class="lightbox-btn close" onclick="closeLightbox()">&times;</span>
+    
+    <!-- Frecce con classi specifiche per il posizionamento -->
+    <span class="lightbox-btn prev" onclick="changeSlide(-1)">&#10094;</span>
+    
+    <img id="lightbox-img" src="" alt="Fullscreen Image">
+    
+    <span class="lightbox-btn next" onclick="changeSlide(1)">&#10095;</span>
+</div>
+
+<!-- 🔹 FOOTER -->
+<footer>
+    <div class="container">
+        <div class="mappa">
+            <iframe src="https://www.google.com" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div class="row text-start mt-4">
+            <div class="col-md-4">
+                <h2>L'Hotel</h2>
+                <p>Un punto di riferimento per l'ospitalità d'eccellenza dal 2010.</p>
+            </div>
+            <div class="col-md-4">
+                <h2>Contatti</h2>
+                <p>Via delle Terme 45, Roma</p>
+                <p>info@hotelnumberone.it</p>
+            </div>
+            <div class="col-md-4">
+                <h2>Social</h2>
+                <a href="#"><img src="fb.png" alt="Facebook" style="width: 50px; height: 50px; vertical-align: middle;"></a>
+                <a href="#"><img src="ig.png" alt="Instagram"style="width: 50px; height: 50px; vertical-align: middle;"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+  <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net"></script>
+</body>
+</html>
