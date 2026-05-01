@@ -1,109 +1,111 @@
- body {
-		background-image:url('58b4aaac-f2bd-4bb4-9958-f07f17e7c840.jpeg ');  
-            background-size: cover; 
-            background-position: center; 
-            background-repeat: no-repeat;
-             color: black; 
-            font-family: Arial, sans-serif;
-        }
-        h1 {
-            text-align: center;
-            color: black;
-           background-color:white;
-            padding: 10px;
+/* --- STILE BASE --- */
+body {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
 
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-			color:black;
-			
-	
-			
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align:center;
-			color:white;
-        }
-		 .io {
-            width: 800px; 
-            height: auto; 
-			border-radius:50%;
-			object-fit: cover;
-			border: 2px solid black;
-		 }
-			
-	th{
-		background: rgba( 0 ,0 ,0,0.5);
-		}
-        /* Stile base per la lista della navbar */
+h1 {
+    text-align: center;
+    color: black;
+    background-color: white;
+    padding: 20px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* --- NAVBAR GRIGIO PERLA --- */
 .nav {
-  display: flex !important;
-  flex-direction: row !important;
-  list-style: none !important;
-  padding: 10px;
-  margin: 0;
-  background-color: #e0e0e0; /* Grigio chiaro perla */
-  justify-content: center;
-  border-bottom: 1px solid #ccc; /* Una sottile linea di rifinitura */
+    display: flex !important;
+    background-color: #e0e0e0;
+    justify-content: center;
+    list-style: none !important;
+    padding: 10px 0;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
 }
 
-/* Link della navbar */
 .nav-link {
-  text-decoration: none !important;
-  color: #333 !important; /* Testo grigio scuro per contrasto */
-  padding: 10px 25px;
-  display: block;
-  text-transform: uppercase;
-  font-weight: bold;
-  letter-spacing: 1px;
-  transition: 0.3s;
+    text-decoration: none !important;
+    color: #333 !important;
+    padding: 10px 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
 }
 
-/* Effetto al passaggio del mouse */
 .nav-link:hover {
-  background-color: #95a5a6 ; /* Un grigio leggermente più scuro */
-  color: #000 !important;
-  border-radius: 4px;
+    background-color: #95a5a6;
+    color: white !important;
+    border-radius: 4px;
 }
 
-/* 🔹 MENU A TENDINA (AZIENDE) */
+/* --- DROPDOWN AZIENDE --- */
 .nav-item {
-  position: relative;
+    position: relative;
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #eae5e550; 
-  min-width: 160px;
-  list-style: none;
-  padding: 0;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-  border-radius: 0 0 4px 4px;
-  z-index: 1000;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #e0e0e0;
+    min-width: 160px;
+    z-index: 1000;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
 }
 
 .dropdown-content li a {
-  color: #333 !important;
-  padding: 12px 20px;
-  display: block;
-  text-decoration: none;
-  font-size: 14px;
-  transition: 0.2s;
+    color: #333 !important;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
 }
 
 .dropdown-content li a:hover {
-  background-color: #8d775f; /* Manteniamo il tuo colore di accento per l'hover */
-  color: #fff !important;
+    background-color: #8d775f;
+    color: white !important;
 }
 
-/* Mostra la tendina al passaggio del mouse */
 .nav-item:hover .dropdown-content {
-  display: block;
+    display: block;
+}
+
+/* --- CAROUSEL FOTO --- */
+.carousel {
+    max-width: 900px;
+    margin: 40px auto;
+    border: 8px solid white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.5);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 550px; /* Altezza bilanciata */
+    object-fit: cover;
+}
+
+.titolo-sezione {
+    color: white;
+    font-size: 3rem;
+    margin-top: 30px;
+    text-shadow: 2px 2px 8px black;
+    background: rgba(0,0,0,0.3);
+    display: inline-block;
+    padding: 10px 40px;
+    border-radius: 50px;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #6c757d;
+    color: white;
+    padding: 25px;
+    margin-top: 50px;
 }
