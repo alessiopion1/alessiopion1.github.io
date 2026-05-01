@@ -60,21 +60,23 @@
          <h1>Lo Tito Alessio Pio</h1>
       </header>
       <main>
-         <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-            <div class="container-fluid">
-               <a class="navbar-brand" href="index.html">Home</a>
-               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-               </button>
-               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                  <div class="navbar-nav">
-                     <a class="nav-link" href="#">Carriera</a>
-                     <a class="nav-link" href="foto.html">Foto e Video</a>
-                     <a class="nav-link" href="hotel.html"target="blank">Aziende</a>
-                  </div>
-               </div>
-            </div>
-         </nav>
+       <ul class="nav">
+  <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+  <li class="nav-item"><a href="carriera.html" class="nav-link">Carierra</a></li>
+  <li class="nav-item"><a href="foto.html" class="nav-link">Foto</a></li>
+
+  <!-- La voce Aziende con il sottomenu -->
+  <li class="nav-item dropdown">
+    <a href="#" class="nav-link">Aziende</a>
+    <ul class="dropdown-content">
+      <li><a href="hotel.html">Hotel</a></li>
+      <li><a href="sushi.html">Sushi</a></li>
+    </ul>
+  </li>
+
+  <li class="nav-item"><a href="contatti.html" class="nav-link">Contatti</a></li>
+</ul>
+
          <h1>Carriera</h1>
          <div class="row">
             <div class="col-2"></div>
