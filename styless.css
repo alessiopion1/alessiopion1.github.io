@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Century Gothic', sans-serif;
+}
+
+/* 🔹 Header */
+header {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('sfondo.jpg');
+  background-size: cover;
+  background-position: left;
+  min-height: 100vh;
+}
+
+/* 🔹 Navbar */
+.nav .nav-link {
+  padding: 5px 15px;
+  transition: all 0.3s ease;
+}
+
+.nav .nav-link:hover,
+.nav-item.active .nav-link {
+  background-color: #fff;
+  color: #000 !important;
+  border-radius: 5px;
+}
+
+/* 🔹 Logo */
+.logo img {
+  height: auto;
+}
+
+/* 🔹 Testo generale */
+h1 {
+  font-size: 48px;
+  color: white;
+  font-weight: bold;
+}
+
+p {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* 🔹 Pulsante Menu */
+.button {
+  margin-top: 20px;
+}
+
+.btn {
+  border: 1px solid #fff;
+  padding: 10px 25px;
+  color: #fff;
+  font-size: 18px;
+  transition: 0.5s ease;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: grey;
+}
+/* 🔹 Footer */
+footer {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+footer h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+footer p {
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+footer .mappa {
+  width: 100%;
+  height: 300px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* 🔹 Social */
+footer a {
+  display: inline-block;
+  margin: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+footer a img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+footer a:hover img {
+  transform: scale(1.1);
+}
+
+/* 🔹 Responsive */
+@media (max-width: 768px) {
+  footer {
+    padding: 30px 15px;
+    font-size: 0.9rem;
+  }
+
+  footer h2 {
+    font-size: 1rem;
+  }
+
+  footer .mappa {
+    height: 200px;
+  }
+
+  footer a img {
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+  }
+}
+
+
+/* 🔹 Mappa */
+.mappa {
+  width: 100%;
+  height: 400px;
+  border: 2px solid #333;
+}
+
+
+/* 🔹 Card Noleggi */
+.card-noleggi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.card-immagine img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.card-contenuto {
+  flex: 1;
+}
+
+.card-titolo .categoria {
+  font-weight: bold;
+  color: #0077b6;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.card-titolo h2 {
+  font-size: 1.8rem;
+  margin: 0.5rem 0;
+}
+
+.card-testo p {
+  line-height: 1.6;
+  color: white;
+}
+
+/* 🔹 Responsive */
+@media (max-width: 768px) {
+  .card-noleggi {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-immagine img {
+    max-width: 100%;
+  }
+}
+ /* 🔹 Galleria immagini */
+      .galleria {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 15px;
+        margin: 50px auto;
+        width: 90%;
+      }
+
+      .galleria a {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        display: block;
+      }
+
+      .galleria img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        transition: transform 0.5s ease, opacity 0.5s ease;
+      }
+
+      .galleria a:hover img {
+        transform: scale(1.05);
+        opacity: 0.9;
+      }
+
+      .galleria a::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.3);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .galleria a:hover::after {
+        opacity: 1;
+      }
+	  /* 🔹 Lightbox fullscreen */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+/* 🔹 Pulsanti freccia */
+.lightbox .prev, 
+.lightbox .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 50px;
+  cursor: pointer;
+  padding: 20px;
+  user-select: none;
+  transition: color 0.3s;
+}
+
+.lightbox .prev:hover, 
+.lightbox .next:hover {
+  color: #0077b6;
+}
+
+.lightbox .prev {
+  left: 5%;
+}
+
+.lightbox .next {
+  right: 5%;
+}
+
+/* 🔹 Pulsante chiudi */
+.lightbox .close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.lightbox .close:hover {
+  color: #ff4d4d;
+}
+.lightbox img {
+  transition: opacity 0.3s ease;
+}
+

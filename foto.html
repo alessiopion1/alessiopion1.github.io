@@ -3,27 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lo Tito Alessio Pio - Foto e Video</title>
-    <link rel="icon" type="image/x-icon" href="logo.png">
+    <title>Lo Tito Alessio Pio - Foto & Video</title>
+    <link rel="icon" type="image/x-icon" href="logo1.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Bootstrap 5 -->
-    <link href="https://jsdelivr.net" rel="stylesheet">
-    <!-- Tuo CSS Esterno -->
-    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <style>
+        body {
+            background-image: url('io.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: black;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: white;
+            padding: 15px;
+            margin: 0;
+        }
+
+        /* NAVBAR STILE "LAMPADA" */
+        .nav-container { background-color: #e0e0e0; border-bottom: 1px solid #ccc; }
+        .nav { display: flex; list-style: none; padding: 0; margin: 0; justify-content: center; }
+        .nav-link { text-decoration: none; color: #333; padding: 15px 25px; display: block; text-transform: uppercase; font-weight: bold; }
+        .nav-link:hover { background-color: #d0d0d0; }
+        .nav-item { position: relative; }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%; left: 0;
+            background-color: #e0e0e0;
+            min-width: 160px; z-index: 1000;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+            list-style: none; padding: 0;
+        }
+        .dropdown-content li a { color: #333; padding: 12px 20px; display: block; text-decoration: none; }
+        .dropdown-content li a:hover { background-color: #ccc; }
+        .nav-item:hover .dropdown-content { display: block; }
+
+        /* GRIGLIA GALLERIA (Prendendo spunto dal Lido) */
+        .galleria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .galleria img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 3px solid white;
+        }
+        .galleria img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 20px rgba(0,0,0,0.5);
+        }
+
+        /* LIGHTBOX (Effetto ingrandimento) */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox.active { display: flex; }
+        .lightbox img { max-width: 85%; max-height: 85%; border: 3px solid white; }
+        .close, .prev, .next {
+            position: absolute;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            user-select: none;
+        }
+        .close { top: 20px; right: 30px; }
+        .prev { left: 20px; }
+        .next { right: 20px; }
+
+        footer { background-color: #6c757d; color: white; padding: 20px; text-align: center; margin-top: 50px; }
+    </style>
 </head>
-<body style="background-image: url('io.jpeg');">
+<body>
 
     <header>
         <h1>Lo Tito Alessio Pio</h1>
     </header>
 
-    <nav>
+    <nav class="nav-container">
         <ul class="nav">
             <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="carriera.html" class="nav-link">Carriera</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Foto</a></li>
-
-            <!-- Menu Aziende con Dropdown -->
             <li class="nav-item">
                 <a href="#" class="nav-link">Aziende</a>
                 <ul class="dropdown-content">
@@ -31,51 +114,35 @@
                     <li><a href="sushi.html">Sushi</a></li>
                 </ul>
             </li>
-
             <li class="nav-item"><a href="contatti.html" class="nav-link">Contatti</a></li>
         </ul>
     </nav>
 
-    <main class="container text-center">
-        <h2 class="titolo-sezione" style="margin-top: 30px;">FOTO E VIDEO</h2>
-
-        <!-- Carousel delle Foto -->
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7"></button>
-            </div>
-            
-            <div class="carousel-inner">
-                <div class="carousel-item active"><img src="a.jpeg" alt="Squad Lykos Tolve"></div>
-                <div class="carousel-item"><img src="b.jpeg" alt="Vittoria Campionato Under 19"></div>
-                <div class="carousel-item"><img src="c.jpeg" alt="Vittoria Coppa Under 17"></div>
-                <div class="carousel-item"><img src="d.jpeg" alt="Vittoria Campionato Under 17"></div>
-                <div class="carousel-item"><img src="e.jpeg" alt="Vittoria Coppa Under 17"></div>
-                <div class="carousel-item"><img src="f.jpeg" alt="Vittoria Coppa Under 17"></div>
-                <div class="carousel-item"><img src="g.jpeg" alt="Vittoria Coppa Under 17"></div>
-                <div class="carousel-item"><img src="h.jpeg" alt="Vittoria Coppa Under 17"></div>
-            </div>
-
-            <!-- Controlli avanti/indietro -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Precedente</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Successiva</span>
-            </button>
+    <main>
+        <h2 style="text-align:center; color:white; margin-top:30px; text-shadow: 2px 2px 5px black;">GALLERIA FOTOGRAFICA</h2>
+        
+        <!-- GALLERIA CON LE TUE FOTO -->
+        <div class="galleria">
+            <img src="a.jpeg" alt="Foto 1">
+            <img src="b.jpeg" alt="Foto 2">
+            <img src="c.jpeg" alt="Foto 3">
+            <img src="d.jpeg" alt="Foto 4">
+            <img src="e.jpeg" alt="Foto 5">
+            <img src="f.jpeg" alt="Foto 6">
+            <img src="g.jpeg" alt="Foto 7">
+            <img src="h.jpeg" alt="Foto 8">
         </div>
     </main>
 
-    <footer class="text-center">		 
+    <!-- LIGHTBOX STRUTTURA -->
+    <div class="lightbox" id="lightbox">
+        <span class="close">&times;</span>
+        <span class="prev">❮</span>
+        <img id="lightbox-img" src="" alt="">
+        <span class="next">❯</span>
+    </div>
+
+    <footer>		 
         <p>Seguite il mio Instagram: 
             <a href="https://instagram.com" target="_blank">
                 <img src="ins.png" alt="Instagram" style="width: 40px; height: 40px; vertical-align: middle;">    
@@ -84,7 +151,39 @@
         <p>&copy; Alessio Pio Lo Tito</p>
     </footer>
 
-    <!-- Bootstrap Bundle JS (Fondamentale per far funzionare Carousel e Dropdown) -->
-    <script src="https://jsdelivr.net"></script>
-</body>	
+    <script>
+        const images = document.querySelectorAll('.galleria img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close');
+        const nextBtn = document.querySelector('.next');
+        const prevBtn = document.querySelector('.prev');
+
+        let currentIndex = 0;
+
+        images.forEach((img, index) => {
+            img.addEventListener('click', () => {
+                lightbox.classList.add('active');
+                lightboxImg.src = img.src;
+                currentIndex = index;
+            });
+        });
+
+        closeBtn.addEventListener('click', () => { lightbox.classList.remove('active'); });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            lightboxImg.src = images[currentIndex].src;
+        });
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            lightboxImg.src = images[currentIndex].src;
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) lightbox.classList.remove('active');
+        });
+    </script>
+</body>
 </html>
